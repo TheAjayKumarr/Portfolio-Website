@@ -1,6 +1,9 @@
 import { useState } from "react";
 import { Dialog, DialogPanel } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import TiltedCard from "./TitledCard";
+import Ajay from "../assets/Ajay.png";
+import logo from "../assets/bhaibhaiLogo.png";
 
 const navigation = [
   { name: "Experience", href: "#" },
@@ -22,11 +25,7 @@ export default function Hero() {
           <div className="flex lg:flex-1">
             <a href="#" className="-m-1.5 p-1.5">
               <span className="sr-only">Your Company</span>
-              <img
-                alt=""
-                src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500"
-                className="h-8 w-auto"
-              />
+              <img alt="" src={logo} className="h-8 w-auto" />
             </a>
           </div>
           <div className="flex lg:hidden">
@@ -49,11 +48,6 @@ export default function Hero() {
                 {item.name}
               </a>
             ))}
-          </div>
-          <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-            <a href="#" className="text-sm/6 font-semibold text-white">
-              Log in <span aria-hidden="true">&rarr;</span>
-            </a>
           </div>
         </nav>
         <Dialog
@@ -94,14 +88,6 @@ export default function Hero() {
                     </a>
                   ))}
                 </div>
-                <div className="py-6">
-                  <a
-                    href="#"
-                    className="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-white hover:bg-white/5"
-                  >
-                    Log in
-                  </a>
-                </div>
               </div>
             </div>
           </DialogPanel>
@@ -121,13 +107,34 @@ export default function Hero() {
             className="relative left-[calc(50%-11rem)] aspect-1155/678 w-144.5 -translate-x-1/2 rotate-30 bg-linear-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-288.75"
           />
         </div>
+        <div className="flex justify-center">
+          <TiltedCard
+            imageSrc={Ajay}
+            altText="Ajay's Image"
+            captionText="Ajay Kumar"
+            containerHeight="300px"
+            containerWidth="300px"
+            imageHeight="300px"
+            imageWidth="300px"
+            rotateAmplitude={12}
+            scaleOnHover={1.2}
+            showMobileWarning={false}
+            showTooltip={true}
+            displayOverlayContent={true}
+            overlayContent={
+              <div className="tilted-card-overlay">
+                <p className="tilted-card-demo-text ">Ajay Kumar</p>
+              </div>
+            }
+          />
+        </div>
         <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
           <div className="hidden sm:mb-8 sm:flex sm:justify-center">
-            <div className="relative rounded-full px-3 py-1 text-sm/6 text-gray-400 ring-1 ring-white/10 hover:ring-white/20">
-              Announcing our next round of funding.{" "}
+            <div className="relative rounded-full px-3 py-1 text-sm/10 text-gray-400 ring-1 ring-white/10 hover:ring-white/20">
+              I am{" "}
               <a href="#" className="font-semibold text-indigo-400">
                 <span aria-hidden="true" className="absolute inset-0" />
-                Read more <span aria-hidden="true">&rarr;</span>
+                Ajay Kumar
               </a>
             </div>
           </div>
