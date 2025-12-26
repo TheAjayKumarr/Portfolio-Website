@@ -2,7 +2,6 @@
 import { VscHome, VscArchive } from "react-icons/vsc";
 import { TbListDetails } from "react-icons/tb";
 import { MdOutlineWorkHistory } from "react-icons/md";
-import DockPortal from "./DockPortal";
 
 import {
   motion,
@@ -22,6 +21,7 @@ import {
 } from "react";
 
 import "./Dock.css";
+import { useNavigate } from "react-router";
 
 function DockItem({
   children,
@@ -198,17 +198,17 @@ export default function DockMenu() {
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
-
+  const navigate = useNavigate();
   const items = [
     {
       icon: <VscHome size={18} />,
       label: "Home",
-      onClick: () => alert("Home!"),
+      onClick: () => navigate("/"),
     },
     {
       icon: <VscArchive size={18} />,
       label: "Projects!",
-      onClick: () => alert("Projects!"),
+      onClick: () => navigate("/projects"),
     },
     {
       icon: <TbListDetails size={18} />,

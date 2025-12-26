@@ -43,11 +43,11 @@ export default function Hero() {
                   className="
       absolute
       top-1/2 left-1/2
-      -translate-x-1/2 -translate-y-1/2
-      w-72 h-72
+      -translate-y-1/2 
+      w-60 h-60
       bg-[url('https://fonts.gstatic.com/s/e/notoemoji/latest/1f44b_1f3fb/512.webp')]
       bg-contain bg-no-repeat
-      opacity-50
+      opacity-70
       z-0
       pointer-events-none
     "
