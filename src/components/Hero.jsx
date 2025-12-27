@@ -32,33 +32,54 @@ export default function Hero() {
                 Kumar
               </h1>
             </div>
+            <div className="max-w-3xl m-auto pt-8 text-justify">
+              <p>
+                Hey, I am a <strong> B.Tech graduate</strong> in{" "}
+                <b>Computer Science and Business Systems </b>
+                from <i>Bharati Vidyapeeth College of Engineering, Pune</i>,
+                originally from <i>MP, India</i>. I am a{" "}
+                <b>frontend-focused developer</b> with hands-on experience in{" "}
+                <b>
+                  <i>HTML, CSS, JavaScript, React, and Tailwind CSS</i>{" "}
+                </b>
+                , along with a strong foundation in{" "}
+                <b>Machine Learning and Data Science</b>. I’ve worked on ML
+                projects involving{" "}
+                <b>
+                  <i>Python, CNNs, and deep learning</i>
+                </b>
+                , and I enjoy building scalable web interfaces backed by
+                data-driven thinking. I’m <b>actively seeking opportunities</b>{" "}
+                where I can contribute, learn, and grow as a developer.
+              </p>
+            </div>
           </div>
 
           {/* ================= DESKTOP ONLY ================= */}
-          <div className="hidden lg:block justify-center">
-            <div className="grid grid-cols-3 items-center h-[300px] gap-10 justify-center justify-items-center  max-w-7xl">
-              <div className="relative text-5xl inline-block">
-                {/* Background emoji */}
+          <div className="hidden lg:block justify-center ">
+            <div className="grid grid-cols-2 items-center h-[300px] gap-10 justify-center justify-items-center  max-w-4xl m-auto">
+              {/* <div className="relative text-5xl inline-block">
+                
                 <div
                   className="
-      absolute
-      top-1/2 left-1/2
-      -translate-y-1/2 
-      w-60 h-60
-      bg-[url('https://fonts.gstatic.com/s/e/notoemoji/latest/1f44b_1f3fb/512.webp')]
-      bg-contain bg-no-repeat
-      opacity-70
-      z-0
-      pointer-events-none
-    "
+                    absolute
+                    top-1/2 left-1/2
+                    -translate-y-1/2 
+                    w-60 h-60
+                    bg-[url('https://fonts.gstatic.com/s/e/notoemoji/latest/1f44b_1f3fb/512.webp')]
+                    bg-contain bg-no-repeat
+                    opacity-70
+                    z-0
+                    pointer-events-none
+                  "
                 />
 
-                {/* Text */}
+                
                 <div className="relative z-10 leading-tight">
                   <h4>Hey!!!</h4>
                   <h4>I am</h4>
                 </div>
-              </div>
+              </div> */}
 
               <TiltedCard
                 imageSrc={Ajay_2}
@@ -73,8 +94,9 @@ export default function Hero() {
                 showTooltip={false}
                 displayOverlayContent={false}
               />
-              <div className="h-full flex items-center">
-                <TextPressure
+
+              <div className=" grid grid-rows-2 h-[300px] items-center gap-0 pt-1">
+                {/* <TextPressure
                   text={`AJAY\nKUMAR`}
                   minFontSize={60}
                   weight
@@ -82,19 +104,43 @@ export default function Hero() {
                   flex={false}
                   italic
                   textColor="rgb(0, 16, 0)"
-                />
+                /> */}
+                <h1 className="bbh-bartle-regular text-[48px] scale-y-[4.2] ">
+                  Ajay
+                </h1>
+                <h1 className="bbh-bartle-regular text-[48px] scale-y-[4.2] ">
+                  Kumar
+                </h1>
               </div>
-
-              {/* <div className="h-full">
-                <TextPressure
-                  text="KUMAR"
-                  minFontSize={60}
-                  weight
-                  width
-                  italic
-                  textColor="rgb(0, 16, 0)"
-                />
-              </div> */}
+            </div>
+            <div className="max-w-3xl m-auto pt-8 text-justify">
+              <p>
+                Hey, I am a 2024 <strong> B.Tech graduate</strong> in{" "}
+                <b>Computer Science and Business Systems </b>
+                from <i>Bharati Vidyapeeth College of Engineering, Pune</i>,
+                originally from{" "}
+                <i>
+                  MP, <b>India</b>
+                </i>
+                . I am a <b>frontend-focused developer</b> with hands-on
+                experience in{" "}
+                <b>
+                  <i>HTML, CSS, JavaScript, React, </i>{" "}
+                </b>
+                and{" "}
+                <b>
+                  <i>Tailwind CSS</i>
+                </b>
+                , along with a strong foundation in{" "}
+                <b>Machine Learning & Data Science</b>. I’ve worked on ML
+                projects involving{" "}
+                <b>
+                  <i>Python, CNNs, & deep learning</i>
+                </b>
+                , and I enjoy building scalable web interfaces backed by
+                data-driven thinking. I’m <b>actively seeking opportunities</b>{" "}
+                where I can contribute, learn, and grow as a developer.
+              </p>
             </div>
           </div>
         </div>

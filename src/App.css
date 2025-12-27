@@ -7,6 +7,9 @@
 .back-color{
   background-color: #41495c66;
 }
+html {
+  scroll-behavior: smooth;
+}
 
 .tilted-card-demo-text {
   text-transform: capitalize;
@@ -34,7 +37,7 @@
 
 .bbh-bartle-regular {
   font-family: "BBH Bartle", sans-serif;
-  font-weight: 400;
+  font-weight: 300;
   font-style: normal;
   color: rgb(0, 16, 0);
 }

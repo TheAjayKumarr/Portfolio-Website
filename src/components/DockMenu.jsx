@@ -198,29 +198,35 @@ export default function DockMenu() {
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
-  const navigate = useNavigate();
+
+  const scrollToSection = (id) => {
+    const section = document.getElementById(id);
+    section?.scrollIntoView({ behavior: "smooth" });
+  };
+
   const items = [
     {
       icon: <VscHome size={18} />,
       label: "Home",
-      onClick: () => navigate("/"),
+      onClick: () => scrollToSection("intro"),
     },
     {
       icon: <VscArchive size={18} />,
-      label: "Projects!",
-      onClick: () => navigate("/projects"),
+      label: "Projects",
+      onClick: () => scrollToSection("projects"),
     },
     {
       icon: <TbListDetails size={18} />,
-      label: "Resume!",
-      onClick: () => alert("Resume!"),
+      label: "Resume",
+      onClick: () => scrollToSection("resume"),
     },
     {
       icon: <MdOutlineWorkHistory size={18} />,
-      label: "Experience!",
-      onClick: () => alert("Experience!"),
+      label: "Experience",
+      onClick: () => scrollToSection("experience"),
     },
   ];
+
   return (
     <>
       <motion.div
