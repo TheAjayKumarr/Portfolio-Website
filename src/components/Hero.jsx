@@ -1,7 +1,31 @@
 import TiltedCard from "./TitledCard";
 import Ajay_2 from "../assets/Ajay_2.png";
+import { IoLocationOutline } from "react-icons/io5";
+import { LuGithub } from "react-icons/lu";
+import { SlSocialLinkedin } from "react-icons/sl";
+import { MdMailOutline } from "react-icons/md";
 
 export default function Hero() {
+  const socials = [
+    {
+      icon: <LuGithub size={18} />,
+      label: "GitHub",
+      onclick: () => window.open("https://github.com/TheAjayKumarr", "_blank"),
+    },
+    {
+      icon: <SlSocialLinkedin size={18} />,
+      label: "LinkedIn",
+      onclick: () =>
+        window.open("https://www.linkedin.com/in/ajay-kumar-m247/", "_blank"),
+    },
+    {
+      icon: <MdMailOutline size={18} />,
+      label: "Mail",
+      onclick: () =>
+        window.open("mailto:ajay.kumar.candidate@gmail.com", "_blank"),
+    },
+  ];
+
   return (
     <section className="back-color overflow-hidden">
       <div className="px-6 pt-32">
@@ -135,7 +159,7 @@ export default function Hero() {
                 </h1>
               </div>
             </div>
-            <div className="max-w-3xl m-auto pt-8 text-justify">
+            <div className="max-w-3xl m-auto pb-8 text-justify pt-8">
               <p>
                 Hey, I am a 2024 <strong> B.Tech graduate</strong> in{" "}
                 <b>Computer Science and Business Systems </b>
@@ -160,15 +184,37 @@ export default function Hero() {
                 data-driven thinking. <br />
                 <a
                   href="mailto:ajay.kumar.candidate@gmail.com?subject=Potential Opportunity – Frontend / Software Developer"
-                  className=" flex font-bold text-xl p-0.5 justify-center mt-3  border-2 border-b-orange-500 border-r-orange-500 rounded-lg "
+                  className=" flex font-bold text-xl p-0.5 justify-center mt-3  border-2 border-t-black border-l-black border-b-orange-500 border-r-orange-500 rounded-lg "
                 >
-                  <span className=" transition-transform duration-300 ease-out hover:scale-110">
+                  <span className=" transition-transform duration-300 ease-out hover:scale-110 ">
                     Actively seeking opportunities
                   </span>
                 </a>
               </p>
             </div>
-            <div className="h-32 max-w-4xl"></div>
+            <div className="grid max-w-3xl grid-cols-2 m-auto">
+              <div className="grid grid-cols-[54px_minmax(0,_1fr)_100px]">
+                <div className="flex justify-center align-middle h-11 w-11 items-center border border-black rounded-md ">
+                  {<IoLocationOutline size={18} className="" />}
+                </div>
+                <div className="flex items-center h-11">
+                  Dewas, Madhya Pradesh, India
+                </div>
+              </div>
+
+              <div className=" flex  justify-end gap-4  pb-8 ">
+                {socials.map((item, index) => (
+                  <button
+                    key={index}
+                    onClick={item.onclick}
+                    className="p-3 rounded-md border-black border hover:scale-110 transition-transform duration-300   "
+                    aria-label={item.label}
+                  >
+                    {item.icon}
+                  </button>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
 

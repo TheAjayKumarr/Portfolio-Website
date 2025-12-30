@@ -21,7 +21,7 @@ import {
 } from "react";
 
 import "./Dock.css";
-import { useNavigate } from "react-router";
+
 
 function DockItem({
   children,

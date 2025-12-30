@@ -5,7 +5,7 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 .back-color{
-  background-color: #41495c66;
+  background-color: #c9aed3;
 }
 html {
   scroll-behavior: smooth;
@@ -36,8 +36,12 @@ html {
   }
 
 .not-white-green-bg{
-  background-color: rgb(0, 16, 0);
+  background-color: rgb(4, 44, 4);
 }
+.text-green{
+  color: rgb(4, 44, 4);
+}
+
 .modak-regular {
   font-family: "Modak", system-ui;
   font-weight: 400;
