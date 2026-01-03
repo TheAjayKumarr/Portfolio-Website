@@ -20,7 +20,12 @@ html {
 .custom-icon:hover {
   color: rgb(249 115 22 / var(--tw-border-opacity, 1)) /* #f97316 */;
 }
-
+.custom-icon-reverse:hover {
+  color: rgb(256 256 256 / var(--tw-border-opacity, 1)) /* #f97316 */;
+}
+.custom-icon-reverse{
+  color: rgb(249 115 22 / var(--tw-border-opacity, 1));
+}
 .front-md{
   letter-spacing: 0.55em;
   font-size: 1.5rem;
